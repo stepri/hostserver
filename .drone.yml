@@ -3,7 +3,7 @@ name: default
 
 steps:
 - name: build
-  image: golang
+  image: iron/go:dev
   commands:
     - go build app.go
 
