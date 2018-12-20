@@ -19,7 +19,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 
 	if host == "" || host == "/" {
 		log.Print("Host is not valid: " + host)
-		http.NotFound(w, r)
+		errorHandler(w, r, http.StatusNotFound)
 		return
 	}
 
