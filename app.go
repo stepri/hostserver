@@ -15,6 +15,8 @@ func main() {
 }
 
 func handler(w http.ResponseWriter, r *http.Request) {
+	w.Header().Add("Strict-Transport-Security", "max-age=63072000; includeSubDomains")
+
 	host := r.Host
 
 	if host == "" || host == "/" {
