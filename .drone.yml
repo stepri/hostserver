@@ -7,11 +7,10 @@ steps:
   commands:
     - go build app.go
 
-- name: docker  
-  image: plugins/docker
-  settings:
-    username:
-      from_secret: docker_username
-    password:
-      from_secret: docker_password
-    repo: stepri/hostserver
+  - name: docker  
+    image: plugins/docker
+    settings:
+      username: drone
+      password: 'P}KA,PxjEh]suiVo896*+8q6v+3RX{hR2z,EHb3PWXMFLX]JtjL6GJwrFcGsT;9c'
+      repo: registry.stevenprins.com/hostserver
+      registry: registry.stevenprins.com
